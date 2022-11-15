@@ -1,0 +1,47 @@
+server:
+  address:     ":8000"
+  openapiPath: "/api.json"
+  swaggerPath: "/swagger"
+  errorStack: true               # 当Server捕获到异常时是否记录堆栈信息到日志中。默认为true
+  errorLogEnabled: true               # 是否记录异常日志信息到日志中。默认为true
+  errorLogPattern: "error-{Ymd}.log"  # 异常错误日志文件格式。默认为"error-{Ymd}.log"
+  accessLogEnabled: true              # 是否记录访问日志。默认为false
+  accessLogPattern: "access-{Ymd}.log" # 访问日志文件格式。默认为"access-{Ymd}.log"
+
+logger:
+  path: "resource/log/run"
+  file: "{Y-m-d}.log"
+  level : "all"
+  stdout: true
+
+database:
+  logger:
+    level: "all"
+    stdout: true
+    Path: "resource/log/sql"
+
+  default:
+    link:   "mysql:root:123456@tcp(localhost:3306)/go"
+    debug:  true
+    charset: "utf8mb4" #数据库编码
+    dryRun: false #空跑
+    maxIdle: 10 #连接池最大闲置的连接数
+    maxOpen: 10 #连接池最大打开的连接数
+    maxLifetime: 30 #(单位秒)连接对象可重复使用的时间长度
+
+# Redis 配置示例
+redis:
+  # 单实例配置
+  default:
+    address: localhost:6379
+    db: 1
+    idleTimeout: 600
+    maxActive: 100
+    password: "123456"
+
+system:
+  notCheckAuthAdminIds: [1,2,31]  #无需验证后台权限的用户id
+  dataDir: "./resource/data"
+  cache:
+    model: "redis"  #缓存模式 memory OR redis
+    prefix: "goCache_" #缓存前缀
