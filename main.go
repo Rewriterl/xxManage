@@ -2,12 +2,10 @@ package main
 
 import (
 	"github.com/gogf/gf/v2/frame/g"
-	_ "xxManage/internal/packed"
-	"xxManage/internal/service"
+	"xxManage/internal/system/cmd"
+	"xxManage/internal/system/service"
 
 	"github.com/gogf/gf/v2/os/gctx"
-
-	"xxManage/internal/cmd"
 )
 
 func init() {
