@@ -5,7 +5,7 @@
 package dao
 
 import (
-	"xxManage/internal/system/dao/internal"
+	"xxManage/internal/app/system/dao/internal"
 )
 
 // internalSysDeptDao is internal type for wrapping internal DAO implements.

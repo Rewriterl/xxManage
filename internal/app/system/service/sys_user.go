@@ -1,7 +1,7 @@
 package service
 
 import (
-	"xxManage/internal/system/model/dto"
+	"xxManage/internal/app/system/model/dto"
 )
 
 type IUser interface {

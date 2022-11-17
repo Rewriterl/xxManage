@@ -3,7 +3,7 @@ package controller
 import (
 	"context"
 	"xxManage/api/v1/common"
-	"xxManage/internal/common/service"
+	"xxManage/internal/app/common/service"
 )
 
 type captchaController struct{}

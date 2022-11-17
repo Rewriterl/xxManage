@@ -5,22 +5,22 @@
 package dao
 
 import (
-	"xxManage/internal/system/dao/internal"
+	"xxManage/internal/app/system/dao/internal"
 )
 
-// internalSysPostDao is internal type for wrapping internal DAO implements.
-type internalSysPostDao = *internal.SysPostDao
+// internalSysUserDao is internal type for wrapping internal DAO implements.
+type internalSysUserDao = *internal.SysUserDao
 
-// sysPostDao is the data access object for table sys_post.
+// sysUserDao is the data access object for table sys_user.
 // You can define custom methods on it to extend its functionality as you wish.
-type sysPostDao struct {
-	internalSysPostDao
+type sysUserDao struct {
+	internalSysUserDao
 }
 
 var (
-	// SysPost is globally public accessible object for table sys_post operations.
-	SysPost = sysPostDao{
-		internal.NewSysPostDao(),
+	// SysUser is globally public accessible object for table sys_user operations.
+	SysUser = sysUserDao{
+		internal.NewSysUserDao(),
 	}
 )
 

@@ -2,7 +2,7 @@ package router
 
 import (
 	"github.com/gogf/gf/v2/net/ghttp"
-	commonRouter "xxManage/internal/common/router"
+	commonRouter "xxManage/internal/app/common/router"
 )
 
 func BindController(group *ghttp.RouterGroup) {

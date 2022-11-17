@@ -2,7 +2,7 @@ package system
 
 import (
 	"github.com/gogf/gf/v2/frame/g"
-	dto2 "xxManage/internal/system/model/dto"
+	"xxManage/internal/app/system/model/dto"
 )
 
 // 对外提供的输入输出结构定义
@@ -16,8 +16,8 @@ type UserLoginReq struct {
 }
 type UserLoginResp struct {
 	g.Meta      `mime:"application/json"`
-	UserInfo    *dto2.LoginUserRes `json:"userInfo"`
-	Token       string             `json:"token"`
-	MenuList    []*dto2.UserMenus  `json:"menuList"`
-	Permissions []string           `json:"permissions"`
+	UserInfo    *dto.LoginUserRes `json:"userInfo"`
+	Token       string            `json:"token"`
+	MenuList    []*dto.UserMenus  `json:"menuList"`
+	Permissions []string          `json:"permissions"`
 }
