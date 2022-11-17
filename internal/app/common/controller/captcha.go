@@ -2,8 +2,8 @@ package controller
 
 import (
 	"context"
-	"xxManage/api/v1/common"
-	"xxManage/internal/app/common/service"
+	"github.com/Rewriterl/xxManage/v1/api/v1/common"
+	"github.com/Rewriterl/xxManage/v1/internal/app/common/service"
 )
 
 type captchaController struct{}

@@ -1,10 +1,10 @@
 package main
 
 import (
+	"github.com/Rewriterl/xxManage/v1/internal/app/system/service"
+	"github.com/Rewriterl/xxManage/v1/internal/cmd"
 	"github.com/gogf/gf/v2/frame/g"
 	"github.com/gogf/gf/v2/os/gctx"
-	"xxManage/internal/app/system/cmd"
-	"xxManage/internal/app/system/service"
 )
 
 func init() {

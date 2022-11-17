@@ -1,7 +1,7 @@
 package service
 
 import (
-	"xxManage/internal/app/system/model/dto"
+	"github.com/Rewriterl/xxManage/v1/internal/app/system/model/dto"
 )
 
 type IUser interface {

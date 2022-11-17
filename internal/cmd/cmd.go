@@ -2,10 +2,10 @@ package cmd
 
 import (
 	"context"
+	"github.com/Rewriterl/xxManage/v1/internal/router"
 	"github.com/gogf/gf/v2/frame/g"
 	"github.com/gogf/gf/v2/net/ghttp"
 	"github.com/gogf/gf/v2/os/gcmd"
-	"xxManage/internal/router"
 )
 
 var (

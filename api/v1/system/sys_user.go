@@ -1,8 +1,8 @@
 package system
 
 import (
+	"github.com/Rewriterl/xxManage/v1/internal/app/system/model/dto"
 	"github.com/gogf/gf/v2/frame/g"
-	"xxManage/internal/app/system/model/dto"
 )
 
 // 对外提供的输入输出结构定义

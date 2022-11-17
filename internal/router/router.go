@@ -1,8 +1,8 @@
 package router
 
 import (
+	commonRouter "github.com/Rewriterl/xxManage/v1/internal/app/common/router"
 	"github.com/gogf/gf/v2/net/ghttp"
-	commonRouter "xxManage/internal/app/common/router"
 )
 
 func BindController(group *ghttp.RouterGroup) {

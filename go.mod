@@ -1,4 +1,4 @@
-module xxManage
+module github.com/Rewriterl/xxManage/v1
 
 go 1.15
 

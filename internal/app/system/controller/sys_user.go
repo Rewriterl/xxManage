@@ -2,7 +2,7 @@ package controller
 
 import (
 	"context"
-	"xxManage/api/v1/system"
+	"github.com/Rewriterl/xxManage/v1/api/v1/system"
 )
 
 var (
