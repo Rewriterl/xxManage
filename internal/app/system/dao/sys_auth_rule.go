@@ -5,7 +5,7 @@
 package dao
 
 import (
-	"xxManage/internal/app/system/dao/internal"
+	"github.com/Rewriterl/xxManage/v1/internal/app/system/dao/internal"
 )
 
 // internalSysAuthRuleDao is internal type for wrapping internal DAO implements.

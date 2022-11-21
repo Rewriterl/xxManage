@@ -1,8 +1,0 @@
-2022-11-15 13:42:57.303 [DEBU] {f0f6831eb4ab2717312f5a7810ab099e} [241 ms] [default] [go] [rows:21 ] SHOW FULL COLUMNS FROM `sys_user`
-2022-11-15 13:42:57.341 [DEBU] {f0f6831eb4ab2717312f5a7810ab099e} [ 37 ms] [default] [go] [rows:25 ] SELECT * FROM `sys_user` WHERE `deleted_at` IS NULL
-2022-11-15 13:49:17.939 [DEBU] {88ebd3c00cac2717667dce5c08c01efb} [199 ms] [default] [go] [rows:21 ] SHOW FULL COLUMNS FROM `sys_user`
-2022-11-15 13:49:17.987 [DEBU] {88ebd3c00cac2717667dce5c08c01efb} [ 46 ms] [default] [go] [rows:25 ] SELECT * FROM `sys_user` WHERE `deleted_at` IS NULL
-2022-11-15 13:50:45.394 [DEBU] {601eb01521ac27175c93a243e7dd421a} [331 ms] [default] [go] [rows:21 ] SHOW FULL COLUMNS FROM `sys_user`
-2022-11-15 13:50:45.433 [DEBU] {601eb01521ac27175c93a243e7dd421a} [ 38 ms] [default] [go] [rows:25 ] SELECT * FROM `sys_user` WHERE `deleted_at` IS NULL
-2022-11-15 14:26:17.195 [DEBU] {e821d97311ae27179fec4719fbdbc8c4} [249 ms] [default] [go] [rows:21 ] SHOW FULL COLUMNS FROM `sys_user`
-2022-11-15 14:26:17.246 [DEBU] {e821d97311ae27179fec4719fbdbc8c4} [ 50 ms] [default] [go] [rows:25 ] SELECT * FROM `sys_user` WHERE `deleted_at` IS NULL

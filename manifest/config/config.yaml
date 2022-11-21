@@ -43,5 +43,12 @@ system:
   notCheckAuthAdminIds: [1,2,31]  #无需验证后台权限的用户id
   dataDir: "./resource/data"
   cache:
-    model: "redis"  #缓存模式 memory OR redis
     prefix: "goCache_" #缓存前缀
+
+token:
+  cacheKey: "Token_"
+  timeOut: 10800
+  maxRefresh: 5400
+  multiLogin: true
+  encryptKey: "49c54195e750b04e74a8429b17896586"
+  cacheModel: "redis"

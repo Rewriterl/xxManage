@@ -13,6 +13,9 @@ func init() {
 	if err != nil {
 		g.Log().Panic(ctx, err)
 	}
+	if err != nil {
+		return
+	}
 }
 
 func main() {
