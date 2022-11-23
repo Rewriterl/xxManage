@@ -2,7 +2,6 @@ package service
 
 import (
 	"context"
-	"github.com/Rewriterl/xxManage/v1/internal/app/common/consts"
 	"github.com/Rewriterl/xxManage/v1/internal/app/common/model"
 	"github.com/gogf/gf/v2/net/ghttp"
 	"github.com/tiger1103/gfast-token/gftoken"
@@ -27,11 +26,7 @@ var gT = gfTokenImpl{
 
 func GfToken(options *model.TokenOptions) IToken {
 	var fun gftoken.OptionFunc
-	if options.CacheModel == consts.CacheModelRedis {
-		fun = gftoken.WithGRedis()
-	} else {
-		fun = gftoken.WithGCache()
-	}
+	fun = gftoken.WithGRedis()
 	gT.GfToken = gftoken.NewGfToken(
 		gftoken.WithCacheKey(options.CacheKey),
 		gftoken.WithTimeout(options.Timeout),

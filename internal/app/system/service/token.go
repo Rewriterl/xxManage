@@ -27,7 +27,7 @@ func Token() commonService.IToken {
 		defer tokenService.lock.Unlock()
 		if tokenService.token == nil {
 			ctx := gctx.New()
-			err := g.Cfg().MustGet(ctx, "gfToken").Struct(&tokenService.options)
+			err := g.Cfg().MustGet(ctx, "token").Struct(&tokenService.options)
 			liberr.ErrIsNil(ctx, err)
 			tokenService.token = commonService.GfToken(tokenService.options)
 		}

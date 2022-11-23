@@ -48,6 +48,7 @@ func (s *sysInit) LoadConfigFile() (err error) {
 		return
 	}
 	redisConfig := c2.Map()
+	//TODO: redis配置有误，貌似是没设置好密码
 	err = gredis.SetConfigByMap(redisConfig)
 	if err != nil {
 		return

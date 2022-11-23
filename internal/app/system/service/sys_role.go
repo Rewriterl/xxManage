@@ -33,7 +33,7 @@ func (r *roleImpl) getRoleListFromDb(ctx context.Context) (value interface{}, er
 	return
 }
 
-func (r roleImpl) GetRoleList(ctx context.Context) (list []*entity.SysRole, err error) {
+func (r *roleImpl) GetRoleList(ctx context.Context) (list []*entity.SysRole, err error) {
 	//TODO implement me
 	cache := commonService.Cache()
 	//从缓存获取

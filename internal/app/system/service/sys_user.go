@@ -30,7 +30,6 @@ type userImpl struct {
 }
 
 func (u *userImpl) NotCheckAuthAdminIds(ctx context.Context) *gset.Set {
-	//TODO implement me
 	notCheckAuthIds := []int{1}
 	return gset.NewFrom(notCheckAuthIds)
 }
@@ -192,7 +191,6 @@ func (u *userImpl) UpdateLoginInfo(ctx context.Context, id uint64, ip string) (e
 }
 
 func (u *userImpl) GetUserByUserNameAndPassWord(ctx context.Context, req *system.UserLoginReq) (user *dto.LoginUserRes, err error) {
-	//TODO implement me
 	err = g.Try(ctx, func(ctx context.Context) {
 		user, err = u.getUserByUserName(ctx, req.Username)
 		liberr.ErrIsNil(ctx, err)

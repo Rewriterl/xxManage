@@ -14,7 +14,7 @@ type UserLoginReq struct {
 	VerifyCode string `p:"verifyCode" v:"required#验证码不能为空"`
 	VerifyKey  string `p:"verifyKey"`
 }
-type UserLoginResp struct {
+type UserLoginRes struct {
 	g.Meta      `mime:"application/json"`
 	UserInfo    *dto.LoginUserRes `json:"userInfo"`
 	Token       string            `json:"token"`

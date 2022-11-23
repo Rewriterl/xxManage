@@ -49,6 +49,10 @@ token:
   cacheKey: "Token_"
   timeOut: 10800
   maxRefresh: 5400
-  multiLogin: true
+  multiLogin: false
   encryptKey: "49c54195e750b04e74a8429b17896586"
   cacheModel: "redis"
+
+casbin:
+  modelFile: "./resource/casbin/rbac_model.conf"
+  policyFile: "./resource/casbin/rbac_policy.csv"
