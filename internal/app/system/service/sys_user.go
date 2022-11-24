@@ -14,6 +14,7 @@ import (
 	"github.com/gogf/gf/v2/os/gtime"
 	"github.com/gogf/gf/v2/text/gstr"
 	"github.com/gogf/gf/v2/util/gconv"
+	"github.com/mssola/user_agent"
 	"github.com/tiger1103/gfast/v3/library/libUtils"
 	"github.com/tiger1103/gfast/v3/library/liberr"
 )
@@ -23,10 +24,31 @@ type IUser interface {
 	UpdateLoginInfo(ctx context.Context, id uint64, ip string) (err error)
 	GetAdminRules(ctx context.Context, userId uint64) (menuList []*dto.UserMenus, permissions []string, err error)
 	NotCheckAuthAdminIds(ctx context.Context) *gset.Set
+	LoginLog(ctx context.Context, params *dto.LoginLogParams)
 }
 
 type userImpl struct {
 	CasbinUserPrefix string
+}
+
+func (u *userImpl) LoginLog(ctx context.Context, params *dto.LoginLogParams) {
+	userAgent := user_agent.New(params.UserAgent)
+	browser, _ := userAgent.Browser()
+	sysLoginLog := entity.SysLoginLog{
+		LoginName:     params.Username,
+		Ipaddr:        params.Ip,
+		LoginLocation: libUtils.GetCityByIp(params.Ip),
+		Browser:       browser,
+		Os:            userAgent.OS(),
+		Status:        params.Status,
+		Msg:           params.Msg,
+		LoginTime:     gtime.Now(),
+		Module:        params.Module,
+	}
+	_, err := dao.SysLoginLog.Ctx(ctx).Insert(sysLoginLog)
+	if err != nil {
+		g.Log().Error(ctx, err)
+	}
 }
 
 func (u *userImpl) NotCheckAuthAdminIds(ctx context.Context) *gset.Set {

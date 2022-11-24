@@ -26,10 +26,17 @@ func (l loginController) Login(ctx context.Context, req *system.UserLoginReq) (u
 	)
 
 	ip := libUtils.GetClientIp(ctx)
-	//userAgent := libUtils.GetUserAgent(ctx)
+	userAgent := libUtils.GetUserAgent(ctx)
 	user, err = service.User().GetUserByUserNameAndPassWord(ctx, req)
 	if err != nil {
-		// 登录失败日志
+		service.SysLoginLog().Invoke(ctx, &dto.LoginLogParams{
+			Status:    0,
+			Username:  req.Username,
+			Ip:        ip,
+			UserAgent: userAgent,
+			Msg:       err.Error(),
+			Module:    "系统后台",
+		})
 		return
 	}
 	err = service.User().UpdateLoginInfo(ctx, user.Id, ip)
